@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+
+    <ul>
+        <a routerLink="profile">Perfil</a>
+    </ul>
+
+   <ul>
+       <a routerLink="create-list">Crear Lista</a>
+   </ul>
+   <span class="spacer"></span>
+   <ul>
+    <a *ngIf="!_auth.isLogged()" mat-button routerLink="singup">Registro</a>
+    <a *ngIf="!_auth.isLogged()" mat-button routerLink="login">Acceder</a>
+    <a *ngIf="_auth.isLogged()" mat-button (click)="logOut()">Salir</a>
+   </ul>
+</mat-toolbar>

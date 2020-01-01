@@ -1,0 +1,23 @@
+
+<div class="container">
+    <mat-grid-list cols=2 rowHeight="100px" gutterSize="10px">
+        <mat-grid-tile *ngFor="let list of lists"
+        
+        class="list"
+        [colspan]="1">
+        <h2 routerLink = "lists/{{list._id}}">{{list.title}}</h2>  
+        
+        <mat-action-row>
+            <mat-icon color="primary" (click)=delete(list)>delete</mat-icon>
+        </mat-action-row>
+       
+
+        </mat-grid-tile>  
+    </mat-grid-list>
+    
+    
+</div>
+
+<button routerLink="/create-list" class="circle-add-button">
+    <img src="../../../assets/icono.svg" />
+  </button>

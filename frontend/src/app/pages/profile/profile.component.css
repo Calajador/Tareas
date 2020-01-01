@@ -1,0 +1,40 @@
+.container {
+    padding: 25px;
+}
+
+.list {
+    background-color: springgreen;
+    margin-top: 25px;
+    
+}
+
+  .mat-icon {
+    padding-right:15px;
+    position: relative;
+    left: 300px;
+    top: 40px;
+  }
+  
+  .mat-icon:hover {
+    color: #FF0000;
+    cursor: pointer;
+    padding-right:15px;
+  }
+
+.circle-add-button {
+    position: absolute;
+    bottom: 35px;
+    right: 35px;
+    height: 50px;
+    width: 50px;
+    background-color: thistle;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+h2:hover {
+  color: #FF0000;
+    cursor: pointer;
+    padding-right:15px;
+}

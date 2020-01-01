@@ -1,0 +1,16 @@
+<div class="form centrar">
+    <mat-card class="card">
+        <mat-card-title>Crear Lista</mat-card-title>
+        <mat-card-content>
+            <div class="container">
+                <mat-form-field>
+                    <input [(ngModel)]="createList.title" matInput placeholder="Titulo">
+                </mat-form-field>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button (click)="create()" class="button" mat-raised-button color="accent">Crear Lista</button>
+            <!-- <button (click)="createUploadImage()" class="button" mat-raised-button color="accent">Create Task</button>  -->
+        </mat-card-actions>
+    </mat-card>
+</div>

@@ -1,0 +1,42 @@
+
+<div class="accordion_display">
+    <div class="accordion_size">
+        <mat-accordion multi="true" >
+            <mat-expansion-panel *ngFor="let task of tasks" hideToggle="false">
+
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <span class="text_center">{{task.name}}</span>
+                        <span class="spacer"></span>
+                        <button class="btDone" *ngIf="task.status == 'Terminado'" mat-raised-button>{{task.status}}</button>
+                        <button class="btInProgress" *ngIf="task.status == 'En Proceso'" mat-raised-button>{{task.status}}</button>
+                        <button class="btToDo" *ngIf="task.status == 'to-do'" mat-raised-button>{{task.status}}</button>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+
+                <mat-panel-description>
+                    {{task.description}}
+                </mat-panel-description>
+
+                <mat-panel-description>
+                    <img class="image_center" src="{{task.imageUrl}}">
+                </mat-panel-description>
+
+                <mat-action-row>
+                    <button class="btSelectTodo" mat-button (click)="changeStatus(task, 'to-do')">To DO</button>
+                    <button class="btSelectInProgress" mat-button (click)="changeStatus(task, 'En Proceso')">En Proceso</button>
+                    <button class="btSelectDone" mat-button (click)="changeStatus(task, 'Terminado')">Terminado</button>
+                    <span class="spacer"></span>
+                    <mat-icon color="primary" (click)=delete(task)>delete</mat-icon>
+                </mat-action-row>
+
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+</div>
+
+
+
+<button routerLink="create-task" class="circle-add-button">
+    <img src="../../../assets/icono.svg" />
+  </button>
